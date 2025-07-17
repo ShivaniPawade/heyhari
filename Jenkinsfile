@@ -6,11 +6,14 @@ pipeline {
     }
 
     stages {
+
         stage('Clone Repository') {
             steps {
-                git credentialsId: 'c6502360-f744-4d13-834f-ad3e42bdf37b',
+                git(
+                    credentialsId: 'c6502360-f744-4d13-834f-ad3e42bdf37b',
                     url: 'https://github.com/ShivaniPawade/heyhari.git',
                     branch: 'main'
+                )
             }
         }
 
@@ -24,7 +27,7 @@ pipeline {
 
         stage('Push to DockerHub') {
             steps {
-                withDockerRegistry([credentialsId: '0bb99875-0531-4404-8f53-79da55bacc44', url: '']) {
+                withDockerRegistry(credentialsId: '0bb99875-0531-4404-8f53-79da55bacc44', url: '') {
                     script {
                         docker.image("${IMAGE_NAME}:${BUILD_NUMBER}").push()
                     }
@@ -47,4 +50,3 @@ pipeline {
         }
     }
 }
-
