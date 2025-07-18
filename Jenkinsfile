@@ -10,7 +10,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git(
-                    credentialsId: '789ea13f-db16-4efb-829c-c2706673c620',
+                    credentialsId: 'c6502360-f744-4d13-834f-ad3e42bdf37b',
                     url: 'https://github.com/ShivaniPawade/heyhari.git',
                     branch: 'main'
                 )
