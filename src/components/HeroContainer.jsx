@@ -6,7 +6,7 @@ const HeroContainer = () => {
   return (
     <div className=" max-md:flex-col flex justify-between items-center mt-10 mb-28">
       <div className='max-w-[81%] md:max-w-[58%]'>
-        <h1 className="max-md:text-[2.5rem] max-2xl:text-[3.5rem] max-2xl:leading-1">Creative way to Showcase your App. Just to check the jenkins pipeline check.</h1>
+        <h1 className="max-md:text-[2.5rem] max-2xl:text-[3.5rem] max-2xl:leading-1">Creative way to Showcase your App.</h1>
         <p className=" my-4">
           Present your app in a unique and engaging manner with sApp, designed to highlight its features and attract potential users effectively.
         </p>
